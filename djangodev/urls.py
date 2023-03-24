@@ -16,6 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+import app02
+from app02 import views
+
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    # path('admin/', admin.site.urls),
+    # path('index/', views.index),
+    # path('user_list/', views.user_list),
+    # path('news/', views.news),
+    # path('something/', views.something),
+    # path('orm/', views.orm),
+    # path('getsql/', views.getsql),
+    path('app02_index/', views.index),
+    path('read_userinfo/', views.read_userinfo.as_view())
+
 ]
